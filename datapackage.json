@@ -1,0 +1,14 @@
+{
+    "name": "ddf--unpop--international_migration_stock",
+    "author": "Gapminder",
+    "description": " UN DESA International Migration Dataset",
+    "language": {
+        "name": "English",
+        "id": "en"
+    },
+    "translations": [],
+    "license": "CC-BY-4.0",
+    "title": "UN DESA International Migration Dataset",
+    "version": "0.0.1",
+    "resources": []
+}
