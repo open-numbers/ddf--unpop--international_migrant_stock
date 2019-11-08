@@ -1,14 +1,2915 @@
 {
     "name": "ddf--unpop--international_migration_stock",
-    "author": "Gapminder",
-    "description": " UN DESA International Migration Dataset",
     "language": {
         "name": "English",
         "id": "en"
     },
-    "translations": [],
-    "license": "CC-BY-4.0",
     "title": "UN DESA International Migration Dataset",
+    "description": " UN DESA International Migration Dataset",
+    "author": "Gapminder",
+    "license": "CC-BY-4.0",
+    "created": "2019-11-08T03:06:48.625500+00:00",
+    "translations": [],
     "version": "0.0.1",
-    "resources": []
+    "resources": [
+        {
+            "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "domain"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "name": "ddf--datapoints--emigrant--by--geo--sex--year",
+            "path": "ddf--datapoints--emigrant--by--geo--sex--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "emigrant"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "sex",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--emigrant--by--geo--year",
+            "path": "ddf--datapoints--emigrant--by--geo--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "emigrant"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--immigrant--by--geo--sex--year",
+            "path": "ddf--datapoints--immigrant--by--geo--sex--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "immigrant"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "sex",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--immigrant--by--geo--year",
+            "path": "ddf--datapoints--immigrant--by--geo--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "immigrant"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--migration_stock--by--destination--origin--sex--year",
+            "path": "ddf--datapoints--migration_stock--by--destination--origin--sex--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "destination"
+                    },
+                    {
+                        "name": "origin"
+                    },
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "migration_stock"
+                    }
+                ],
+                "primaryKey": [
+                    "destination",
+                    "origin",
+                    "sex",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--migration_stock--by--destination--origin--year",
+            "path": "ddf--datapoints--migration_stock--by--destination--origin--year.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "destination"
+                    },
+                    {
+                        "name": "origin"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "migration_stock"
+                    }
+                ],
+                "primaryKey": [
+                    "destination",
+                    "origin",
+                    "year"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "is--un_development_groups"
+                    },
+                    {
+                        "name": "is--sustainable_development_goal_sdg_regions"
+                    },
+                    {
+                        "name": "is--middle_income_countries"
+                    },
+                    {
+                        "name": "is--high_income_countries"
+                    },
+                    {
+                        "name": "is--no_income_group_available"
+                    },
+                    {
+                        "name": "is--more_developed_regions"
+                    },
+                    {
+                        "name": "is--low_income_countries"
+                    },
+                    {
+                        "name": "is--world_bank_income_groups"
+                    },
+                    {
+                        "name": "is--less_developed_regions"
+                    },
+                    {
+                        "name": "is--geographic_regions"
+                    },
+                    {
+                        "name": "is--lower_middle_income_countries"
+                    },
+                    {
+                        "name": "is--upper_middle_income_countries"
+                    },
+                    {
+                        "name": "is--least_developed_countries"
+                    },
+                    {
+                        "name": "is--sub_saharan_africa"
+                    }
+                ],
+                "primaryKey": "geo"
+            }
+        },
+        {
+            "name": "ddf--entities--sex",
+            "path": "ddf--entities--sex.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "sex"
+            }
+        }
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--geographic_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--high_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--least_developed_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--less_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--low_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--lower_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--more_developed_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--no_income_group_available",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--sub_saharan_africa",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--sustainable_development_goal_sdg_regions",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--un_development_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--upper_middle_income_countries",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "is--world_bank_income_groups",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--sex"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "geo",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available",
+                    "sex",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "sub_saharan_africa",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "sustainable_development_goal_sdg_regions",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "upper_middle_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries",
+                    "year"
+                ],
+                "value": "emigrant",
+                "resources": [
+                    "ddf--datapoints--emigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geographic_regions",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "high_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "least_developed_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "less_developed_regions",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "low_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "lower_middle_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "middle_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "more_developed_regions",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available",
+                    "sex",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "no_income_group_available",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "sub_saharan_africa",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "sustainable_development_goal_sdg_regions",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "un_development_groups",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "upper_middle_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sex",
+                    "world_bank_income_groups",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sub_saharan_africa",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "sustainable_development_goal_sdg_regions",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_development_groups",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "upper_middle_income_countries",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_bank_income_groups",
+                    "year"
+                ],
+                "value": "immigrant",
+                "resources": [
+                    "ddf--datapoints--immigrant--by--geo--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "destination",
+                    "origin",
+                    "sex",
+                    "year"
+                ],
+                "value": "migration_stock",
+                "resources": [
+                    "ddf--datapoints--migration_stock--by--destination--origin--sex--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "destination",
+                    "origin",
+                    "year"
+                ],
+                "value": "migration_stock",
+                "resources": [
+                    "ddf--datapoints--migration_stock--by--destination--origin--year"
+                ]
+            }
+        ],
+        "synonyms": []
+    }
 }
