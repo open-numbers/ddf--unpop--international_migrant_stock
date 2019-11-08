@@ -2,7 +2,7 @@ concept,concept_type,name,domain
 name,string,Name,
 domain,string,Domain,
 migration_stock,measure,Migration Stock,
-emgirant,measure,Emgirant,
+emigrant,measure,Emigrant,
 immigrant,measure,Immigrant,
 geo,entity_domain,Geo Location,
 sex,entity_domain,Sex,
@@ -22,3 +22,4 @@ least_developed_countries,entity_set,Least Developed Countries,geo
 sub_saharan_africa,entity_set,Sub Saharan Africa,geo
 destination,role,Destination,geo
 origin,role,Origin,geo
+year,time,Time,
