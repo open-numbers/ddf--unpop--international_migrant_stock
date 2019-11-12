@@ -8,7 +8,7 @@
     "description": " UN DESA International Migration Dataset",
     "author": "Gapminder",
     "license": "CC-BY-4.0",
-    "created": "2019-11-08T03:06:48.625500+00:00",
+    "created": "2019-11-12T02:14:20.407158+00:00",
     "translations": [],
     "version": "0.0.1",
     "resources": [
@@ -34,8 +34,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--emigrant--by--geo--sex--year",
-            "path": "ddf--datapoints--emigrant--by--geo--sex--year.csv",
+            "name": "ddf--datapoints--emigrant_stock--by--geo--sex--year",
+            "path": "ddf--datapoints--emigrant_stock--by--geo--sex--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -59,8 +59,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--emigrant--by--geo--year",
-            "path": "ddf--datapoints--emigrant--by--geo--year.csv",
+            "name": "ddf--datapoints--emigrant_stock--by--geo--year",
+            "path": "ddf--datapoints--emigrant_stock--by--geo--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -80,8 +80,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--immigrant--by--geo--sex--year",
-            "path": "ddf--datapoints--immigrant--by--geo--sex--year.csv",
+            "name": "ddf--datapoints--immigrant_stock--by--geo--sex--year",
+            "path": "ddf--datapoints--immigrant_stock--by--geo--sex--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -105,8 +105,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--immigrant--by--geo--year",
-            "path": "ddf--datapoints--immigrant--by--geo--year.csv",
+            "name": "ddf--datapoints--immigrant_stock--by--geo--year",
+            "path": "ddf--datapoints--immigrant_stock--by--geo--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -191,16 +191,34 @@
                         "name": "name"
                     },
                     {
+                        "name": "is--world_bank_income_groups"
+                    },
+                    {
                         "name": "is--un_development_groups"
                     },
                     {
-                        "name": "is--sustainable_development_goal_sdg_regions"
+                        "name": "is--least_developed_countries"
+                    },
+                    {
+                        "name": "is--low_income_countries"
+                    },
+                    {
+                        "name": "is--high_income_countries"
+                    },
+                    {
+                        "name": "is--sub_saharan_africa"
                     },
                     {
                         "name": "is--middle_income_countries"
                     },
                     {
-                        "name": "is--high_income_countries"
+                        "name": "is--sustainable_development_goal_sdg_regions"
+                    },
+                    {
+                        "name": "is--less_developed_regions"
+                    },
+                    {
+                        "name": "is--lower_middle_income_countries"
                     },
                     {
                         "name": "is--no_income_group_available"
@@ -209,28 +227,10 @@
                         "name": "is--more_developed_regions"
                     },
                     {
-                        "name": "is--low_income_countries"
-                    },
-                    {
-                        "name": "is--world_bank_income_groups"
-                    },
-                    {
-                        "name": "is--less_developed_regions"
-                    },
-                    {
                         "name": "is--geographic_regions"
                     },
                     {
-                        "name": "is--lower_middle_income_countries"
-                    },
-                    {
                         "name": "is--upper_middle_income_countries"
-                    },
-                    {
-                        "name": "is--least_developed_countries"
-                    },
-                    {
-                        "name": "is--sub_saharan_africa"
                     }
                 ],
                 "primaryKey": "geo"
@@ -2327,7 +2327,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2337,7 +2337,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2348,7 +2348,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2358,7 +2358,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2369,7 +2369,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2379,7 +2379,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2390,7 +2390,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2400,7 +2400,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2411,7 +2411,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2421,7 +2421,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2432,7 +2432,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2442,7 +2442,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2453,7 +2453,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2463,7 +2463,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2474,7 +2474,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2484,7 +2484,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2495,7 +2495,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2505,7 +2505,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2516,7 +2516,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2527,7 +2527,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2538,7 +2538,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2548,7 +2548,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2558,7 +2558,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2568,7 +2568,7 @@
                 ],
                 "value": "emigrant",
                 "resources": [
-                    "ddf--datapoints--emigrant--by--geo--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2579,7 +2579,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2589,7 +2589,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2600,7 +2600,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2610,7 +2610,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2621,7 +2621,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2631,7 +2631,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2642,7 +2642,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2652,7 +2652,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2663,7 +2663,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2673,7 +2673,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2684,7 +2684,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2694,7 +2694,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2705,7 +2705,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2715,7 +2715,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2726,7 +2726,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2736,7 +2736,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2747,7 +2747,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2757,7 +2757,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2768,7 +2768,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2778,7 +2778,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2789,7 +2789,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2800,7 +2800,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2811,7 +2811,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2822,7 +2822,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2833,7 +2833,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
                 ]
             },
             {
@@ -2843,7 +2843,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2853,7 +2853,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2863,7 +2863,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2873,7 +2873,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
@@ -2883,7 +2883,7 @@
                 ],
                 "value": "immigrant",
                 "resources": [
-                    "ddf--datapoints--immigrant--by--geo--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--year"
                 ]
             },
             {
