@@ -159,7 +159,6 @@ ncl,male,1990,20885
 png,male,1990,19362
 slb,male,1990,2349
 vut,male,1990,1269
-fsm,male,1990,60858
 gum,male,1990,39364
 kir,male,1990,1107
 mhl,male,1990,721
@@ -388,7 +387,6 @@ ncl,male,1995,23908
 png,male,1995,19832
 slb,male,1995,2328
 vut,male,1995,1295
-fsm,male,1995,63046
 gum,male,1995,38822
 kir,male,1995,1139
 mhl,male,1995,916
@@ -617,7 +615,6 @@ ncl,male,2000,26932
 png,male,2000,15874
 slb,male,2000,2224
 vut,male,2000,1320
-fsm,male,2000,64928
 gum,male,2000,38280
 kir,male,2000,1188
 mhl,male,2000,1164
@@ -847,7 +844,6 @@ ncl,male,2005,29909
 png,male,2005,17920
 slb,male,2005,1830
 vut,male,2005,1398
-fsm,male,2005,63769
 gum,male,2005,38602
 kir,male,2005,1312
 mhl,male,2005,1485
@@ -1079,7 +1075,6 @@ ncl,male,2010,32886
 png,male,2010,18466
 slb,male,2010,1546
 vut,male,2010,1487
-fsm,male,2010,57921
 gum,male,2010,38924
 kir,male,2010,1512
 mhl,male,2010,1895
@@ -1312,7 +1307,6 @@ ncl,male,2015,36181
 png,male,2015,18734
 slb,male,2015,1450
 vut,male,2015,1583
-fsm,male,2015,57436
 gum,male,2015,39246
 kir,male,2015,1539
 mhl,male,2015,2011
@@ -1545,7 +1539,6 @@ ncl,male,2019,37984
 png,male,2019,18944
 slb,male,2019,1421
 vut,male,2019,1612
-fsm,male,2019,59558
 gum,male,2019,41185
 kir,male,2019,1594
 mhl,male,2019,2019
@@ -1775,7 +1768,6 @@ ncl,female,1990,16788
 png,female,1990,14348
 slb,female,1990,1877
 vut,female,1990,1039
-fsm,female,1990,48111
 gum,female,1990,30391
 kir,female,1990,1055
 mhl,female,1990,437
@@ -2004,7 +1996,6 @@ ncl,female,1995,19754
 png,female,1995,13694
 slb,female,1995,1850
 vut,female,1995,1166
-fsm,female,1995,55641
 gum,female,1995,33090
 kir,female,1995,1084
 mhl,female,1995,564
@@ -2233,7 +2224,6 @@ ncl,female,2000,22719
 png,female,2000,10430
 slb,female,2000,1757
 vut,female,2000,1306
-fsm,female,2000,65258
 gum,female,2000,35790
 kir,female,2000,1095
 mhl,female,2000,727
@@ -2463,7 +2453,6 @@ ncl,female,2005,25496
 png,female,2005,12186
 slb,female,2005,1441
 vut,female,2005,1402
-fsm,female,2005,64621
 gum,female,2005,36141
 kir,female,2005,1175
 mhl,female,2005,932
@@ -2695,7 +2684,6 @@ ncl,female,2010,28272
 png,female,2010,11959
 slb,female,2010,1214
 vut,female,2010,1504
-fsm,female,2010,57099
 gum,female,2010,36492
 kir,female,2010,1356
 mhl,female,2010,1194
@@ -2928,7 +2916,6 @@ ncl,female,2015,32700
 png,female,2015,12206
 slb,female,2015,1135
 vut,female,2015,1604
-fsm,female,2015,56087
 gum,female,2015,36843
 kir,female,2015,1380
 mhl,female,2015,1273
@@ -3161,7 +3148,6 @@ ncl,female,2019,34553
 png,female,2019,12268
 slb,female,2019,1111
 vut,female,2019,1633
-fsm,female,2019,58420
 gum,female,2019,38661
 kir,female,2019,1428
 mhl,female,2019,1277
