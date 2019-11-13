@@ -1,0 +1,4 @@
+concept,concept_type,name,domain
+migration_stock,measure,Migration Stock,
+emigrant_stock,measure,Emigrant Stock,
+immigrant_stock,measure,Immigrant Stock,
