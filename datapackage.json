@@ -8,7 +8,7 @@
     "description": " UN DESA International Migration Dataset",
     "author": "Gapminder",
     "license": "CC-BY-4.0",
-    "created": "2019-11-12T07:35:15.543276+00:00",
+    "created": "2019-11-13T07:54:45.538803+00:00",
     "translations": [],
     "version": "0.0.1",
     "resources": [
@@ -79,15 +79,15 @@
             }
         },
         {
-            "name": "ddf--datapoints--emigrant_stock--by--geo--sex--year",
-            "path": "ddf--datapoints--emigrant_stock--by--geo--sex--year.csv",
+            "name": "ddf--datapoints--emigrant_stock--by--geo--gender--year",
+            "path": "ddf--datapoints--emigrant_stock--by--geo--gender--year.csv",
             "schema": {
                 "fields": [
                     {
                         "name": "geo"
                     },
                     {
-                        "name": "sex"
+                        "name": "gender"
                     },
                     {
                         "name": "year"
@@ -98,7 +98,7 @@
                 ],
                 "primaryKey": [
                     "geo",
-                    "sex",
+                    "gender",
                     "year"
                 ]
             }
@@ -125,15 +125,15 @@
             }
         },
         {
-            "name": "ddf--datapoints--immigrant_stock--by--geo--sex--year",
-            "path": "ddf--datapoints--immigrant_stock--by--geo--sex--year.csv",
+            "name": "ddf--datapoints--immigrant_stock--by--geo--gender--year",
+            "path": "ddf--datapoints--immigrant_stock--by--geo--gender--year.csv",
             "schema": {
                 "fields": [
                     {
                         "name": "geo"
                     },
                     {
-                        "name": "sex"
+                        "name": "gender"
                     },
                     {
                         "name": "year"
@@ -144,7 +144,7 @@
                 ],
                 "primaryKey": [
                     "geo",
-                    "sex",
+                    "gender",
                     "year"
                 ]
             }
@@ -171,8 +171,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--migration_stock--by--destination--origin--sex--year",
-            "path": "ddf--datapoints--migration_stock--by--destination--origin--sex--year.csv",
+            "name": "ddf--datapoints--migration_stock--by--destination--origin--gender--year",
+            "path": "ddf--datapoints--migration_stock--by--destination--origin--gender--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -182,7 +182,7 @@
                         "name": "origin"
                     },
                     {
-                        "name": "sex"
+                        "name": "gender"
                     },
                     {
                         "name": "year"
@@ -194,7 +194,7 @@
                 "primaryKey": [
                     "destination",
                     "origin",
-                    "sex",
+                    "gender",
                     "year"
                 ]
             }
@@ -222,6 +222,21 @@
                     "origin",
                     "year"
                 ]
+            }
+        },
+        {
+            "name": "ddf--entities--gender",
+            "path": "ddf--entities--gender.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "gender"
             }
         },
         {
@@ -522,21 +537,6 @@
                     }
                 ],
                 "primaryKey": "geo"
-            }
-        },
-        {
-            "name": "ddf--entities--sex",
-            "path": "ddf--entities--sex.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "sex"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "sex"
             }
         }
     ],
@@ -1075,6 +1075,15 @@
             },
             {
                 "primaryKey": [
+                    "gender"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--gender"
+                ]
+            },
+            {
+                "primaryKey": [
                     "geo"
                 ],
                 "value": "name",
@@ -1124,15 +1133,6 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--geo--main_religion_2008"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "sex"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--sex"
                 ]
             },
             {
@@ -1414,12 +1414,12 @@
             {
                 "primaryKey": [
                     "country",
-                    "sex",
+                    "gender",
                     "year"
                 ],
                 "value": "emigrant_stock",
                 "resources": [
-                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--gender--year"
                 ]
             },
             {
@@ -1434,13 +1434,13 @@
             },
             {
                 "primaryKey": [
+                    "gender",
                     "geo",
-                    "sex",
                     "year"
                 ],
                 "value": "emigrant_stock",
                 "resources": [
-                    "ddf--datapoints--emigrant_stock--by--geo--sex--year"
+                    "ddf--datapoints--emigrant_stock--by--geo--gender--year"
                 ]
             },
             {
@@ -1456,12 +1456,12 @@
             {
                 "primaryKey": [
                     "country",
-                    "sex",
+                    "gender",
                     "year"
                 ],
                 "value": "immigrant_stock",
                 "resources": [
-                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--gender--year"
                 ]
             },
             {
@@ -1476,13 +1476,13 @@
             },
             {
                 "primaryKey": [
+                    "gender",
                     "geo",
-                    "sex",
                     "year"
                 ],
                 "value": "immigrant_stock",
                 "resources": [
-                    "ddf--datapoints--immigrant_stock--by--geo--sex--year"
+                    "ddf--datapoints--immigrant_stock--by--geo--gender--year"
                 ]
             },
             {
@@ -1498,13 +1498,13 @@
             {
                 "primaryKey": [
                     "destination",
+                    "gender",
                     "origin",
-                    "sex",
                     "year"
                 ],
                 "value": "migration_stock",
                 "resources": [
-                    "ddf--datapoints--migration_stock--by--destination--origin--sex--year"
+                    "ddf--datapoints--migration_stock--by--destination--origin--gender--year"
                 ]
             },
             {
