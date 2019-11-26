@@ -1,4 +1,4 @@
-destination,origin,gender,year,migration_stock
+destination,origin,gender,year,migrant_stock
 bdi,bel,male,1990,315
 bdi,cod,male,1990,17963
 bdi,fra,male,1990,157

@@ -8,7 +8,7 @@
     "description": " UN DESA International Migration Dataset",
     "author": "Gapminder",
     "license": "CC-BY-4.0",
-    "created": "2019-11-13T07:54:45.538803+00:00",
+    "created": "2019-11-26T09:01:07.347576+00:00",
     "translations": [],
     "version": "0.0.1",
     "resources": [
@@ -171,8 +171,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--migration_stock--by--destination--origin--gender--year",
-            "path": "ddf--datapoints--migration_stock--by--destination--origin--gender--year.csv",
+            "name": "ddf--datapoints--migrant_stock--by--destination--origin--gender--year",
+            "path": "ddf--datapoints--migrant_stock--by--destination--origin--gender--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -188,7 +188,7 @@
                         "name": "year"
                     },
                     {
-                        "name": "migration_stock"
+                        "name": "migrant_stock"
                     }
                 ],
                 "primaryKey": [
@@ -200,8 +200,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--migration_stock--by--destination--origin--year",
-            "path": "ddf--datapoints--migration_stock--by--destination--origin--year.csv",
+            "name": "ddf--datapoints--migrant_stock--by--destination--origin--year",
+            "path": "ddf--datapoints--migrant_stock--by--destination--origin--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -214,7 +214,7 @@
                         "name": "year"
                     },
                     {
-                        "name": "migration_stock"
+                        "name": "migrant_stock"
                     }
                 ],
                 "primaryKey": [
@@ -1502,9 +1502,9 @@
                     "origin",
                     "year"
                 ],
-                "value": "migration_stock",
+                "value": "migrant_stock",
                 "resources": [
-                    "ddf--datapoints--migration_stock--by--destination--origin--gender--year"
+                    "ddf--datapoints--migrant_stock--by--destination--origin--gender--year"
                 ]
             },
             {
@@ -1513,9 +1513,9 @@
                     "origin",
                     "year"
                 ],
-                "value": "migration_stock",
+                "value": "migrant_stock",
                 "resources": [
-                    "ddf--datapoints--migration_stock--by--destination--origin--year"
+                    "ddf--datapoints--migrant_stock--by--destination--origin--year"
                 ]
             }
         ],
